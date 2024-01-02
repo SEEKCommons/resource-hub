@@ -9,7 +9,9 @@ dependencies:
   - hdf5plugin
   - matplotlib
   - notebook
+  - pandas
   - pip
   - pip:
+    - SPARQLWrapper
     - h5pyd
     - rise
