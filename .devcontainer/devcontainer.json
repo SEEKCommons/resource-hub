@@ -9,7 +9,6 @@
       "vscode": {
         "extensions": [
             "ms-python.python",
-            "ms-python.vscode-pylance",
             "ms-toolsai.jupyter",
             "ms-toolsai.vscode-jupyter-slideshow",
             "ms-vscode.cmake-tools",
