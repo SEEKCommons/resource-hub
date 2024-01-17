@@ -2,6 +2,18 @@
 
 These should be defined by the RH gang, based on functional requirements.
 
+From Lane of the Resource Hub gang:
+
+The Resource Hub has the following components of note:
+1. a database platform, with Wikidata being the default
+2. a dataset, with WikiCite being the default data environment but also requiring an additional socio-environmental justice dataset specific to this project
+3. a frontend, with Scholia being the default but our own SEEKCommons Jupyter notebooks being a more adaptable, controllable, archivable alternative
+4. an accessibility plan, with the Wikimedia environment being the default as it includes cultural norms for web-based accessibility, civility, diversity, usability, new-user onboarding, and some usage statistics
+5. documentation and reporting, with existing Scholia reports being the default documentation pending our presentation of SEEKCommons as a case study
+
+In summary, the default plan for the Resource Hub is to build it integrated in Wikipedia's own platform, and inheriting Wikipedia's default system characteristics including everything ChatGPT listed below unless the SEEKCommons team chooses to change something. The most significant intervention which SEEKCommons has planned is the addition of the field-specific dataset.
+
+
 ChatGPT says:
 
 Technical requirements, also known as system requirements, are the technical aspects that a system must fulfill to meet its functional requirements. They define the technical conditions and constraints under which a system must operate. These requirements are crucial in guiding the design and development of a system, particularly in the fields of software development, engineering, and IT systems. Key aspects of technical requirements include:
