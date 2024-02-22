@@ -14,7 +14,7 @@ PREFIX target: <http://www.wikidata.org/entity/Q106509427>
 
 `target:` is [instance of](https://www.wikidata.org/wiki/Property:P31) a [organization](https://www.wikidata.org/wiki/Q43229) or [facility](https://www.wikidata.org/wiki/Q13226383)
 
-Subclasses of [organization](https://www.wikidata.org/wiki/Q43229) are fine as well.
+Subclasses of [organization](https://www.wikidata.org/wiki/Q43229) are fine as well, e.g., [nonprofit organization](https://www.wikidata.org/wiki/Q163740).
 
 `target:` has [official website](https://www.wikidata.org/wiki/Property:P856) `?url`
 
