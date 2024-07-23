@@ -22,7 +22,7 @@ What makes this entry a curriculum?
   - The module order is represented via *series ordinal* (`Property:P1545`) statements.
   - While it is possible to support rather intricate module nesting structures, at the moment, we support simple linear sequences only.
 
-There could be additional statements, e.g., citations and references, and more information is better, but this is the miminimum.
+There could be additional statements, e.g., citations and references, and more information is better, but this is the minimum.
 
 ## Modules
 
