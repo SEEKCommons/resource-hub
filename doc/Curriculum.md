@@ -13,6 +13,7 @@ In this document, we describe how to represent SEEKCommons curricula in the SEEK
 
 What makes this entry a curriculum?
 
+- Well, the entry itself is **not** a curriculum, but it represents a curriculum. The resource hub does not store the curriculum content itself but rather metadata about the curriculum. The curriculum content (modules) is stored in the SEEKCommons website, in Zenodo records, YouTube videos, etc. The resource hub provides a way to discover and access these resources. This information can then be used by a *renderer* to display them in any form required.
 - `Q126722701` is, among other things, an instance of (`Property:P31`) of [curriculum](https://www.wikidata.org/wiki/Q1402601) (`Q1402601`)
 - The curriculum's author (`Property:P50`) is the [SEEKCommons project](https://www.wikidata.org/wiki/Q118147033)
 - A description of the curriculum (`Property:P973`) can be found at a URL such as https://seekcommons.org/fellowship-application.html
