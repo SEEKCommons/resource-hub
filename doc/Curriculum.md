@@ -24,6 +24,8 @@ What makes this entry a curriculum?
 
 There could be additional statements, e.g., citations and references, and more information is better, but this is the minimum.
 
+List the SEEKCommons curricula in Wikidata:
+
 ```sparql
 SELECT DISTINCT ?curr ?currLabel ?url WHERE {
   ?curr wdt:P31 wd:Q1402601 ;           # Instance of = curriculum
@@ -35,6 +37,23 @@ SELECT DISTINCT ?curr ?currLabel ?url WHERE {
 }
 ```
 [Try it!](https://query.wikidata.org/#SELECT%20DISTINCT%20%3Fcurr%20%3FcurrLabel%20%3Furl%20%3Fsource%20WHERE%20%7B%0A%20%20%3Fcurr%20wdt%3AP31%20wd%3AQ1402601%20%3B%20%20%20%20%20%20%20%20%20%20%20%23%20Instance%20of%20%3D%20curriculum%0A%20%20%20%20%20%20%20%20wdt%3AP50%20wd%3AQ118147033%20.%20%20%20%20%20%20%20%20%20%23%20Author%20%3D%20SEEKCommons%20project%0A%20%20OPTIONAL%20%7B%20%3Fcurr%20wdt%3AP973%20%3Furl.%20%7D%20%20%20%20%20%23%20Described%20at%20URL%0A%20%20OPTIONAL%20%7B%20%3Fcurr%20wdt%3AP1343%20%3Fsource.%20%7D%20%23%20Described%20at%20source%20%0A%20%20%0A%20%20SERVICE%20wikibase%3Alabel%20%7B%20bd%3AserviceParam%20wikibase%3Alanguage%20%22%5BAUTO_LANGUAGE%5D%2Cen%22.%20%7D%0A%7D)
+
+List the modules in SEEKCommons curricula:
+
+```sparql
+SELECT DISTINCT ?modLabel WHERE {
+  ?curr wdt:P31 wd:Q1402601 ;           # Instance of = curriculum
+        wdt:P50 wd:Q118147033 ;         # Author = SEEKCommons project
+        wdt:P527 ?mod .                 # Has parts = *
+  
+  SERVICE wikibase:label { bd:serviceParam wikibase:language "[AUTO_LANGUAGE],en". }
+}
+```
+[Try it!](https://query.wikidata.org/#SELECT%20DISTINCT%20%3FmodLabel%20WHERE%20%7B%0A%20%20%3Fcurr%20wdt%3AP31%20wd%3AQ1402601%20%3B%20%20%20%20%20%20%20%20%20%20%20%23%20Instance%20of%20%3D%20curriculum%0A%20%20%20%20%20%20%20%20wdt%3AP50%20wd%3AQ118147033%20%3B%20%20%20%20%20%20%20%20%20%23%20Author%20%3D%20SEEKCommons%20project%0A%20%20%20%20%20%20%20%20wdt%3AP527%20%3Fmod%20.%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%23%20Has%20parts%20%3D%20%2a%0A%20%20%0A%20%20SERVICE%20wikibase%3Alabel%20%7B%20bd%3AserviceParam%20wikibase%3Alanguage%20%22%5BAUTO_LANGUAGE%5D%2Cen%22.%20%7D%0A%7D)
+
+
+
+
 
 ## Modules
 
