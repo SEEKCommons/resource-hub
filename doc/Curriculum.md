@@ -61,3 +61,20 @@ Learning modules are identified as instances of [learning module](https://www.wi
 - The work(s) a module cites (`Property:2860`)
 
 A typical example is the *Commons in Science and Technology* module https://www.wikidata.org/wiki/Q126722621. Its content (presentation) can be found in a [Zenodo record](https://zenodo.org/record/12162246), which is referenced via a ZenodoID statement (`Property:4901`).
+
+Since modules in a SEEKCommons curriculum aren't necessarily authored by the SEEKCommons project, the definition of 'SEEKCommons module' is driven by the use of a resource in a SEEKCommons curriculum. In other words,
+something is a SEEKCommons module when it is referenced as part of at least one SEEKCommons curriculum. The query below illustrates that point.
+
+```sparql
+SELECT DISTINCT ?modLabel ?mod ?dateLabel WHERE {
+  ?curr wdt:P31 wd:Q1402601 ;    # Instance of = curriculum
+        wdt:P50 wd:Q118147033 .  # Author = SEEKCommons project
+  
+  ?curr p:P527 ?stmt .           # Has part(s) statement of the SEEKCommons curriculum
+  ?stmt ps:P527 ?mod .           # The Wikidata entity of a module that is part of the curriculum
+  ?mod wdt:P577 ?date .          # Publication date
+  
+  SERVICE wikibase:label { bd:serviceParam wikibase:language "[AUTO_LANGUAGE],en". }
+}
+```
+[Try it!](https://query.wikidata.org/#SELECT%20DISTINCT%20%3FmodLabel%20%3Fmod%20%3FdateLabel%20WHERE%20%7B%0A%20%20%3Fcurr%20wdt%3AP31%20wd%3AQ1402601%20%3B%20%20%20%20%23%20Instance%20of%20%3D%20curriculum%0A%20%20%20%20%20%20%20%20wdt%3AP50%20wd%3AQ118147033%20.%20%20%23%20Author%20%3D%20SEEKCommons%20project%0A%20%20%0A%20%20%3Fcurr%20p%3AP527%20%3Fstmt%20.%20%20%20%20%20%20%20%20%20%20%20%23%20Has%20part%28s%29%20statement%20of%20the%20SEEKCommons%20curriculum%0A%20%20%3Fstmt%20ps%3AP527%20%3Fmod%20.%20%20%20%20%20%20%20%20%20%20%20%23%20The%20Wikidata%20entity%20of%20a%20module%20that%20is%20part%20of%20the%20curriculum%0A%20%20%3Fmod%20wdt%3AP577%20%3Fdate%20.%20%20%20%20%20%20%20%20%20%20%23%20Publication%20date%0A%20%20%0A%20%20SERVICE%20wikibase%3Alabel%20%7B%20bd%3AserviceParam%20wikibase%3Alanguage%20%22%5BAUTO_LANGUAGE%5D%2Cen%22.%20%7D%0A%7D%0A)
