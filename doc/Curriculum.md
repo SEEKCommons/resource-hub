@@ -42,16 +42,15 @@ List the modules in SEEKCommons Fellowship Workshops curriculum:
 
 ```sparql
 SELECT ?modLabel ?mod ?no WHERE {
-  wd:Q126722701 p:P527 ?stmt .
+  wd:Q126722701 p:P527 ?stmt .   # Has part(s) statements of the SEEKCommons Fellowship Workshop Series
   
-  ?stmt ps:P527 ?mod .
-  ?stmt pq:P1545 ?no .
+  ?stmt ps:P527 ?mod .           # The Wikidata entity of a module that is part of the series
+  ?stmt pq:P1545 ?no .           # The series ordinal property of the part
   
   SERVICE wikibase:label { bd:serviceParam wikibase:language "[AUTO_LANGUAGE],en". }
 }
 ```
-[Try it!](https://query.wikidata.org/#SELECT%20%3FmodLabel%20%3Fmod%20%3Fno%20WHERE%20%7B%0A%20%20wd%3AQ126722701%20p%3AP527%20%3Fstmt%20.%0A%20%20%0A%20%20%3Fstmt%20ps%3AP527%20%3Fmod%20.%0A%20%20%3Fstmt%20pq%3AP1545%20%3Fno%20.%0A%20%20%0A%20%20SERVICE%20wikibase%3Alabel%20%7B%20bd%3AserviceParam%20wikibase%3Alanguage%20%22%5BAUTO_LANGUAGE%5D%2Cen%22.%20%7D%0A%7D%0A)
-
+[Try it!](https://query.wikidata.org/#SELECT%20%3FmodLabel%20%3Fmod%20%3Fno%20WHERE%20%7B%0A%20%20wd%3AQ126722701%20p%3AP527%20%3Fstmt%20.%20%20%20%23%20Has%20part%28s%29%20statements%20of%20the%20SEEKCommons%20Fellowship%20Workshop%20Series%0A%20%20%0A%20%20%3Fstmt%20ps%3AP527%20%3Fmod%20.%20%20%20%20%20%20%20%20%20%20%20%23%20The%20Wikidata%20entity%20of%20a%20module%20that%20is%20part%20of%20the%20series%0A%20%20%3Fstmt%20pq%3AP1545%20%3Fno%20.%20%20%20%20%20%20%20%20%20%20%20%23%20The%20series%20ordinal%20property%20of%20the%20part%0A%20%20%0A%20%20SERVICE%20wikibase%3Alabel%20%7B%20bd%3AserviceParam%20wikibase%3Alanguage%20%22%5BAUTO_LANGUAGE%5D%2Cen%22.%20%7D%0A%7D%0A)
 
 ## Modules
 
