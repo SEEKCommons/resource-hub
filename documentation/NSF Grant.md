@@ -19,6 +19,7 @@ start = @<NSFGrant>
         wdt:P11858            .* ; # NSF award ID
 }
 ```
+[Try it!](https://shex-simple.toolforge.org/wikidata/packages/shex-webapp/doc/shex-simple.html?data=Endpoint:%20https://query.wikidata.org/sparql&hideData&manifest=[]&textMapIsSparqlQuery)
 
 Example:
 
