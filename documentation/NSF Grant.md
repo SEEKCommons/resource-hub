@@ -11,7 +11,6 @@ start = @<NSFGrant>
         wdt:P31   [ wd:Q230788 ] ; # instance of = grant
         wdt:P1476             .* ; # title
         wdt:P17   [ wd:Q30 ]     ; # country = USA
-        wdt:P1027 [ wd:Q304878 ] ; # conferred by = NSF
         wdt:P921              .* ; # main subject
         wdt:P580              .* ; # start time
         wdt:P582              .* ; # end time
