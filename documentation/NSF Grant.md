@@ -1,26 +1,23 @@
 # NSF Grant
 
 ```sparql
-PREFIX  schema: <http://schema.org/>
-PREFIX  p:     <http://www.wikidata.org/prop/>
-PREFIX  wdt:   <http://www.wikidata.org/prop/direct/> 
-PREFIX  skos:  <http://www.w3.org/2004/02/skos/core#> 
-PREFIX  rdfs:  <http://www.w3.org/2000/01/rdf-schema#> 
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+prefix wd: <http://www.wikidata.org/entity/>
+prefix wdt: <http://www.wikidata.org/prop/direct/>
 
 start = @<NSFGrant>
 
-<NSFGrant>{
-        rdfs:label   .* ;
-        schema:description  .* ;
-        schema:name         .* ;
-        skos:altLabel       .* ;
-        skos:prefLabel      .* ;
-        wdt:P31  [ wd:Q230788 ]; # instance of = grant
-        wdt:P11858          .* ; # NSF award ID
-        wdt:P580            .* ; # start time
-        wdt:P582            .* ; # end time
-        wdt:P17  [ wd:Q30 ]    ; # country = USA
-        wdt:P2769           .* ; # budget
+<NSFGrant> EXTRA wdt:P31 wdt:P11858 {
+        wdt:P31  [ wd:Q230788 ]  ; # instance of = grant
+        wdt:P1476           .*   ; # title
+        wdt:P17  [ wd:Q30 ]      ; # country = USA
+        wdt:P1027 [ wd:Q304878 ] ; # conferred by = NSF
+        wdt:P921              .* ; # main subject
+        wdt:P580              .* ; # start time
+        wdt:P582              .* ; # end time
+        wdt:P2769             .* ; # budget
+        wdt:P8329             .* ; # principal investigator
+        wdt:P11858            .* ; # NSF award ID
 }
 ```
 
