@@ -1,6 +1,6 @@
 # NSF Grant
 
-```
+```sparql
 PREFIX  schema: <http://schema.org/>
 PREFIX  p:     <http://www.wikidata.org/prop/>
 PREFIX  wdt:   <http://www.wikidata.org/prop/direct/> 
