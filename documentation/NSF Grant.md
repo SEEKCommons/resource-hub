@@ -7,15 +7,15 @@ prefix wdt: <http://www.wikidata.org/prop/direct/>
 
 start = @<NSFGrant>
 
-<NSFGrant> EXTRA wdt:P31 wdt:P11858 {
-        wdt:P31   [ wd:Q230788 ] ; # instance of = grant
+<NSFGrant>{
+#        wdt:P31   [ wd:Q230788 ] ; # instance of = grant
         wdt:P1476             .* ; # title
-        wdt:P17   [ wd:Q30 ]     ; # country = USA
+#        wdt:P17   [ wd:Q30 ]     ; # country = USA
         wdt:P921              .* ; # main subject
         wdt:P580              .* ; # start time
         wdt:P582              .* ; # end time
-        wdt:P2769             .* ; # budget
-        wdt:P8329             .* ; # principal investigator
+#        wdt:P2769             .* ; # budget
+#        wdt:P8329             .* ; # principal investigator
         wdt:P11858            .* ; # NSF award ID
 }
 ```
@@ -24,11 +24,12 @@ Example:
 
 ```sparql
 SELECT ?grant WHERE {
-  ?grant wdt:P11858 ?awardID;
+  ?grant wdt:P31/wdt:P279* wd:Q230788 ;
+    wdt:P11858 ?awardID;
     wdt:P580 ?startDate;
     wdt:P582 ?endDate;
-    wdt:P17 wd:Q30;
-    wdt:P2769 ?budget.
+#    wdt:P17 wd:Q30;
+#    wdt:P2769 ?budget.
   SERVICE wikibase:label { bd:serviceParam wikibase:language "[AUTO_LANGUAGE],en". }
 }
 ORDER BY (?startDate)
