@@ -10,6 +10,7 @@ START = @<Software>
 <Software> EXTRA wdt:P31 {
     wdt:P31 [ wd:Q7397 ] ;      # Instance of: Software
     wdt:P178 IRI+ ;             # Developer (optional, can have multiple values)
+    wdt:P400 IRI* ;             # Platforms (optional, multiple allowed, hardware and software)
     wdt:P277 IRI+ ;             # Programming language (optional)
     wdt:P306 IRI+ ;             # Operating system (optional)
     wdt:P1324 IRI* ;            # Source code repository URL (optional, multiple allowed)
