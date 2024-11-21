@@ -13,8 +13,10 @@ PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 
 START = @<NSFGrant>
 
-<NSFGrant> EXTRA wdt:P31 wdt:P17 {
+<NSFGrant> EXTRA wdt:P31 wdt:P1027 wdt:P8324 wdt:P17 {
     wdt:P31   [ wd:Q230788 ] ;         # Instance of: Grant
+    wdt:P1027 [ wd:Q304878 ] ;         # Conferred by: NSF
+    wdt:P8324 [ wd:Q304878 ] ;         # Funder: NSF
     wdt:P1476 rdf:langString? ;        # Title (optional)
     wdt:P17   [ wd:Q30 ] ;             # Country: USA
     wdt:P921 IRI+ ;                    # Main subject (multiple allowed)
