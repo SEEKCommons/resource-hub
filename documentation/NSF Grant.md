@@ -13,7 +13,7 @@ PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 
 START = @<NSFGrant>
 
-<NSFGrant> EXTRA wdt:P31 wdt:17 {
+<NSFGrant> EXTRA wdt:P31 wdt:P17 {
     wdt:P31   [ wd:Q230788 ] ;         # Instance of: Grant
     wdt:P1476 rdf:langString? ;        # Title (optional)
     wdt:P17   [ wd:Q30 ] ;             # Country: USA
