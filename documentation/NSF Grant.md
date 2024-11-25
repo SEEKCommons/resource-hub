@@ -25,6 +25,7 @@ START = @<NSFGrant>
     wdt:P2769 xsd:decimal? ;           # Budget
     wdt:P8329 IRI+ ;                   # Principal investigator (multiple allowed)
     wdt:P11858 xsd:string /[0-9]{7}/ ; # NSF award ID
+    wdt:P856 IRI? ;                    # Official website (optional)
 }
 ```
 [Try it!](https://shex-simple.toolforge.org/wikidata/packages/shex-webapp/doc/shex-simple.html?data=Endpoint:%20https://query.wikidata.org/sparql&hideData&manifest=[]&textMapIsSparqlQuery)
