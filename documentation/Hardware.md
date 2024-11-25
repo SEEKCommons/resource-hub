@@ -10,13 +10,13 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 
 # Example SPARQL query: SELECT ?p { VALUES ?p { wd:Q16626381 }}
+# Example SPARQL query: SELECT ?ohw WHERE { ?ohw wdt:P31 wd:Q159172 . }
 
 START = @<Hardware>
 
 <Hardware> EXTRA wdt:P31 {
-    #wdt:P31 [ wd:Q39631 ] ;       # Instance of: Hardware (or subclass, e.g., computer hardware)
-    wdt:P31 [ wd:Q159172 ] ;       # Instance of: Open Hardware
-    wdt:P176 IRI+ ;              # Manufacturer (e.g., Apple, Intel, Dell)
+    wdt:P31 [ wd:Q159172 ] ;     # Instance of: Open Hardware
+    wdt:P176 IRI* ;              # Manufacturer (e.g., Apple, Intel, Dell)
     wdt:P571 xsd:dateTime? ;     # Inception (optional)
     wdt:P5123 xsd:dateTime? ;    # Date of production end (optional)
     wdt:P137 IRI* ;              # Operator (optional, e.g., who uses or manages the hardware)
