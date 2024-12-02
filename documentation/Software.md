@@ -1,3 +1,5 @@
+# Software
+
 ```sparql
 PREFIX wd: <http://www.wikidata.org/entity/>
 PREFIX wdt: <http://www.wikidata.org/prop/direct/>
@@ -26,3 +28,4 @@ START = @<Software>
     wdt:P2078 IRI* ;            # User manual URL (optional)
 }
 ```
+[Try it!](https://shex-simple.toolforge.org/wikidata/packages/shex-webapp/doc/shex-simple.html?data=Endpoint:%20https://query.wikidata.org/sparql&hideData&manifest=[]&textMapIsSparqlQuery)
