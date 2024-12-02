@@ -1,31 +1,19 @@
 # NSF Grant
 
-```sparql
-PREFIX wd: <http://www.wikidata.org/entity/>
-PREFIX wdt: <http://www.wikidata.org/prop/direct/>
-PREFIX p: <http://www.wikidata.org/prop/>
-PREFIX ps: <http://www.wikidata.org/prop/statement/>
-PREFIX pq: <http://www.wikidata.org/prop/qualifier/>
-PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
-PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+An NSF grant or award is conferred by the [National Science Foundation](https://www.wikidata.org/wiki/Q304878). The SEEKCommons Wikidata entity schema can be found here: [https://www.wikidata.org/wiki/EntitySchema:E455](https://www.wikidata.org/wiki/EntitySchema:E455).
 
-# Example SPARQL query: SELECT ?p { VALUES ?p { wd:Q118147233 }}
+The salient features of a grant are:
+- An NSF award ID
+- A title
+- One or more main subjects
+- Start and end times (dates)
+- A budget
+- One or more principal (co-)investigators
+- An official website
+- Example: [Disciplinary Improvements: The SEEKCommons Research Coordination Network](https://www.wikidata.org/wiki/Q118147233)
 
-START = @<NSFGrant>
+## Considerations
 
-<NSFGrant> EXTRA wdt:P31 wdt:P1027 wdt:P8324 wdt:P17 {
-    wdt:P31   [ wd:Q230788 ] ;         # Instance of: Grant
-    wdt:P1027 [ wd:Q304878 ] ;         # Conferred by: NSF
-    wdt:P8324 [ wd:Q304878 ] ;         # Funder: NSF
-    wdt:P1476 rdf:langString? ;        # Title (optional)
-    wdt:P17   [ wd:Q30 ] ;             # Country: USA
-    wdt:P921 IRI+ ;                    # Main subject (multiple allowed)
-    wdt:P580 xsd:dateTime? ;           # Start time (optional)
-    wdt:P582 xsd:dateTime? ;           # End time (optional)
-    wdt:P2769 xsd:decimal? ;           # Budget
-    wdt:P8329 IRI+ ;                   # Principal investigator (multiple allowed)
-    wdt:P11858 xsd:string /[0-9]{7}/ ; # NSF award ID
-    wdt:P856 IRI? ;                    # Official website (optional)
-}
-```
-[Try it!](https://shex-simple.toolforge.org/wikidata/packages/shex-webapp/doc/shex-simple.html?data=Endpoint:%20https://query.wikidata.org/sparql&hideData&manifest=[]&textMapIsSparqlQuery)
+A grant or award is not a project; however, it typically funds one or more projects.
+
+Many publications are funded/supported by grants.
