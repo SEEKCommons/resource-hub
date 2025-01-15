@@ -1,6 +1,6 @@
 # Software
 
-he SEEKCommons Wikidata entity schema can be found here: [https://www.wikidata.org/wiki/EntitySchema:E456](https://www.wikidata.org/wiki/EntitySchema:E456).
+The SEEKCommons Wikidata entity schema can be found here: [https://www.wikidata.org/wiki/EntitySchema:E456](https://www.wikidata.org/wiki/EntitySchema:E456).
 
 The salient features of Open-Source Software are:
 - One or more developers
