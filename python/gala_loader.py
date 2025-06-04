@@ -1,6 +1,8 @@
+
 import json, pandas as pd
 import pywikibot
 from pywikibot import pagegenerators
+from pywikibot import WbMonolingualText
 import time
 
 def read_citations_from_csv(csv_file):
@@ -23,7 +25,7 @@ def create_or_find_item(site, title, url):
         item = pywikibot.ItemPage(site, page.title())
         item_dict = item.get()
         
-        # Check if this is indeed our item by comparing title and author
+        # Check if this is indeed our item by comparing title
         if 'en' in item_dict['labels']:
             if title.lower() in item_dict['labels']['en'].lower():
                 return item, False  # Item found, not new
@@ -41,7 +43,7 @@ def add_statement(item, property_id, value):
     prop_dict = prop.get()
     expected_type = prop_dict.get('datatype')
     
-    print(f"Property {property_id} expects type: {expected_type}")
+    #print(f"Property {property_id} expects type: {expected_type}")
     
     claim = pywikibot.Claim(item.site, property_id)
     
@@ -82,8 +84,8 @@ def add_statement(item, property_id, value):
 
 def process_citations(csv_file):
     """Process all citations from the CSV file."""
-    #site = pywikibot.Site('wikidata', 'wikidata')
-    site = pywikibot.Site('test', 'wikidata')
+    site = pywikibot.Site('wikidata', 'wikidata')
+    #site = pywikibot.Site('test', 'wikidata')
     site.login()
 
     citations = read_citations_from_csv(csv_file)
@@ -114,11 +116,11 @@ def process_citations(csv_file):
                 # Add instance of case study (P31:Q155207)
                 add_statement(item, 'P31', 'Q155207')
                 
-                # Add instance of publication (P31:Q732557)
-                add_statement(item, 'P31', 'Q732557')
+                # Add instance of publication (P31:Q732577)
+                add_statement(item, 'P31', 'Q732577')
                 
                 # Add instance of title (P1476)
-                # add_statement(item, 'P1476', title)
+                add_statement(item, 'P1476', WbMonolingualText(text=title, language="en"))
                 
                 # Add instance of full work available at URL (P953)
                 add_statement(item, 'P953', url)
@@ -126,15 +128,15 @@ def process_citations(csv_file):
                 authors = json.loads(row['authors'])
                 for a in authors:
                     name = a['name'].strip()
-                    #if name:
+                    if name:
                         # Add instance of author name string (P2093)
-                        # add_statement(item, 'P2093', name)
+                        add_statement(item, 'P2093', name)
 
                 # Add instance of published in Gala (P1433:Q130549584)
                 add_statement(item, 'P1433', 'Q130549584')
 
                 # Add instance of copyright license CC BY 4.0 (P275:Q20007257)
-                # add_statement(item, 'P275', 'Q20007257')
+                add_statement(item, 'P275', 'Q20007257')
 
                 # Add instance of copyright status copyrighted (P6216:Q50423863)
                 add_statement(item, 'P6216', 'Q50423863')
@@ -149,5 +151,5 @@ def process_citations(csv_file):
 
 
 if __name__ == "__main__":
-    csv_file = "gala.csv"  # Replace with your CSV file path
+    csv_file = "cases_for_seek_min.csv"  # Replace with your CSV file path
     process_citations(csv_file)
