@@ -1,0 +1,42 @@
+# SEEKCommons SPARQL Queries Configuration
+
+'WhatLinksToSEEKCommons':
+  # Finds all Wikidata entities linking to the SEEKCommons project (Q118147033)
+  param_list:
+    - name: limit
+      type: int
+      default_value: 50
+  sparql: |
+    SELECT ?item ?itemLabel ?property ?propertyLabel
+    WHERE {
+      ?item ?property wd:Q118147033 .
+      ?prop wikibase:directClaim ?property .
+      SERVICE wikibase:label { bd:serviceParam wikibase:language "en" . }
+    }
+    LIMIT {{ limit }}
+
+'SEEKCommonersWithORCIDs':
+  # Finds all Wikidata entities linking to the SEEKCommons project (Q118147033)
+  # with ORCID iDs
+  param_list:
+    - name: limit
+      type: int
+      default_value: 50
+  sparql: |
+    SELECT DISTINCT ?item ?itemLabel ?orcid 
+    WHERE {
+    ?item ?property wd:Q118147033 .
+    ?prop wikibase:directClaim ?property .
+    ?item wdt:P496 ?orcid .
+    SERVICE wikibase:label { bd:serviceParam wikibase:language "en" . }
+    }
+    LIMIT {{ limit }}
+
+'SEEKCommonsWorkhops':
+  # Finds all parts of the SEEKCommons workshop series (Q126722701)
+  sparql: |
+    SELECT ?item ?itemLabel
+    WHERE {
+      wd:Q126722701 wdt:P527 ?item .
+      SERVICE wikibase:label { bd:serviceParam wikibase:language "en" . }
+    }
