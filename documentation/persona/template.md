@@ -19,3 +19,5 @@
 ### Knowledge Graph Interaction
 
 ### Queries
+
+## Benefits
