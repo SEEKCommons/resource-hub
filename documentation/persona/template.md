@@ -16,7 +16,7 @@
 
 ## Resource Hub Use
 
-### Knowledge Graph Interaction
+### Knowledge Graph (KG) Interaction
 
 ### Queries
 
