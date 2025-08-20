@@ -12,7 +12,7 @@
 
 ### LLM
 
-### Learning Preferences
+### Learning Curve Components
 
 ## Resource Hub Use
 
