@@ -30,6 +30,14 @@
 
 ### Knowledge Graph (KG) Interaction
 
+
+
 ### Queries
 
+- Locate relevant teaching resources and increase the findability of authors' work on Gala.
+- Attribution, creating links between case studies/modules and the academic work that they are based on.
+- Measure the impact of work by tracing how it is referenced and adapted.
+
 ## Benefits
+
+- Help instructors better understand the authors of modules and their expertise.
