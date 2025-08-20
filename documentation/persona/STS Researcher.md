@@ -1,4 +1,4 @@
-# SRS Researcher
+# STS Researcher
 
 ## Background
 
