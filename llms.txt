@@ -1,0 +1,65 @@
+---
+
+# SEEKCommons
+
+> The **Socio‑Environmental Knowledge Commons (SEEKCommons)** is an NSF‑funded research coordination network advancing open, community‑centered socio‑environmental research. Key resources live on the homepage, our GitHub organization, and a curated Wikidata knowledge graph.
+
+**Important notes for LLMs and agents**
+
+- **Scope & provenance.** SEEKCommons convenes STS scholars, open‑science technologists, and researchers working with climate‑impacted communities. Canonical project scope, collaborators, and grant details are on the **About** page and the NSF award record.
+- **Knowledge graph.** The **Resource Hub** is a knowledge graph built on **Wikidata**; for freshest data, query Wikidata rather than scraping HTML. (SPARQL example below.)
+- **Licensing.**  
+  - Website content: see page‑level notices; site footer states “copyleft: all rights reversed for the commons.”  
+  - GitHub **resource‑hub** code: **GPL‑3.0**.  
+  - Wikidata data: **CC0**.  
+  - Zenodo deposits: license varies by record.  
+  - Zotero group is bibliographic metadata; rights follow underlying works.
+- **Inference focus.** This file is intended to help LLMs answer questions using authoritative links at inference time. Use the URLs below as starting points; prefer primary sources when citing.
+- **Name & synonyms.** “SEEKCommons” = **Socio‑Environmental Knowledge Commons**; sometimes abbreviated **SEEK** in context.
+
+**SPARQL quick start** (copy/paste at https://query.wikidata.org/)
+
+```sparql
+# Participants of SEEKCommons (Wikidata item Q118147033)
+SELECT ?participant ?participantLabel WHERE {
+  wd:Q118147033 wdt:P710 ?participant .
+  SERVICE wikibase:label { bd:serviceParam wikibase:language "en". }
+}
+````
+
+---
+
+## Core web pages
+
+* [Home](https://seekcommons.org/)
+* [About](https://seekcommons.org/about.html): Overview, collaborators, NSF award.
+* [Project activities](https://seekcommons.org/project-activities.html)
+* [Fellowship – application](https://seekcommons.org/fellowship-application.html)
+* [Fellowship – FAQ](https://seekcommons.org/fellowship-faq.html)
+* [Community calls](https://seekcommons.org/community-calls.html)
+* [Core team](https://seekcommons.org/core-team.html)
+* [Fellows](https://seekcommons.org/fellows.html)
+* [Common resources](https://seekcommons.org/resources.html)
+
+## GitHub — Resource Hub
+
+* [SEEKCommons/resource-hub](https://github.com/SEEKCommons/resource-hub): Repository landing page and notebooks.
+* [README](https://github.com/SEEKCommons/resource-hub/blob/main/README.md): What the Resource Hub is and how it uses Wikidata/SPARQL.
+* [SPARQL.ipynb](https://github.com/SEEKCommons/resource-hub/blob/main/SPARQL.ipynb): runnable query examples.
+* [query_objects.yaml](https://github.com/SEEKCommons/resource-hub/blob/main/query_objects.yaml): reusable query objects.
+* [CODE_OF_CONDUCT.md](https://github.com/SEEKCommons/resource-hub/blob/main/CODE_OF_CONDUCT.md)
+* [requirements.txt](https://github.com/SEEKCommons/resource-hub/blob/main/requirements.txt) · [environment.yml](https://github.com/SEEKCommons/resource-hub/blob/main/environment.yml)
+* License: [GPL‑3.0](https://github.com/SEEKCommons/resource-hub/blob/main/LICENSE)
+
+## Wikidata
+
+* [SEEKCommons (Q118147033)](https://www.wikidata.org/wiki/Q118147033): canonical identifiers; participants; official website; grant reference.
+* [Wikidata Query Service](https://query.wikidata.org/): run SPARQL queries (see example above).
+
+## Common resources
+
+* [Zotero group library](https://www.zotero.org/groups/4931993/seekcommons_public_library)
+* [Zenodo community](https://zenodo.org/communities/seekcommons/)
+* [GitHub organization](https://github.com/SEEKCommons)
+
+---
