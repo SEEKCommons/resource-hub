@@ -1,4 +1,4 @@
-FROM mcr.microsoft.com/devcontainers/miniconda:0-3
+FROM mcr.microsoft.com/devcontainers/base:ubuntu
 
 RUN conda install -n base -c conda-forge mamba
 
