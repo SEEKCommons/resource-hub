@@ -15,3 +15,5 @@ dependencies:
     - SPARQLWrapper
     - h5pyd
     - rise
+    - tqdm
+    - sentence_transformers
