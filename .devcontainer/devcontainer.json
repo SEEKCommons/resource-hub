@@ -16,7 +16,7 @@
             "h5web.vscode-h5web"
             ],
         "settings": {
-          "python.defaultInterpreterPath": "/opt/conda/envs/seekcommons",
+          "python.defaultInterpreterPath": "/opt/conda/envs/seekcommons/bin/python",
           "terminal.integrated.shell.linux": "/bin/bash"
         }
       }
