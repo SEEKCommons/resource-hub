@@ -45,10 +45,10 @@ SELECT ?participant ?participantLabel WHERE {
 
 * [SEEKCommons/resource-hub](https://github.com/SEEKCommons/resource-hub): Repository landing page and notebooks.
 * [README](https://github.com/SEEKCommons/resource-hub/blob/main/README.md): What the Resource Hub is and how it uses Wikidata/SPARQL.
-* [SPARQL.ipynb](https://github.com/SEEKCommons/resource-hub/blob/main/SPARQL.ipynb): runnable query examples.
-* [query_objects.yaml](https://github.com/SEEKCommons/resource-hub/blob/main/query_objects.yaml): reusable query objects.
+* [SPARQL.ipynb](https://github.com/SEEKCommons/resource-hub/blob/main/notebooks/SPARQL.ipynb): runnable query examples.
+* [query_objects.yaml](https://github.com/SEEKCommons/resource-hub/blob/main/documentation/query_objects.yaml): reusable query objects.
 * [CODE_OF_CONDUCT.md](https://github.com/SEEKCommons/resource-hub/blob/main/CODE_OF_CONDUCT.md)
-* [requirements.txt](https://github.com/SEEKCommons/resource-hub/blob/main/requirements.txt) · [environment.yml](https://github.com/SEEKCommons/resource-hub/blob/main/environment.yml)
+* [requirements.txt](https://github.com/SEEKCommons/resource-hub/blob/main/notebooks/requirements.txt) · [environment.yml](https://github.com/SEEKCommons/resource-hub/blob/main/environment.yml)
 * License: [GPL‑3.0](https://github.com/SEEKCommons/resource-hub/blob/main/LICENSE)
 
 ## Wikidata
