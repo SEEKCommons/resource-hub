@@ -8,6 +8,11 @@ RUN if [ -f "/tmp/conda-tmp/environment.yml" ]; then umask 0002 \
     && /opt/conda/bin/mamba env create -f /tmp/conda-tmp/environment.yml; fi \
     && rm -rf /tmp/conda-tmp
 
-RUN apt-get update && apt-get -y install --no-install-recommends \
-  build-essential cmake libtool-bin git less wget \
-  libhdf5-dev libhdf5-mpi-dev hdf5-tools
+# [Optional] Uncomment to install a different version of Python than the default
+# RUN conda install -y python=3.6 \
+#     && pip install --no-cache-dir pipx \
+#     && pipx reinstall-all
+
+# [Optional] Uncomment this section to install additional OS packages.
+# RUN apt-get update && export DEBIAN_FRONTEND=noninteractive \
+#     && apt-get -y install --no-install-recommends <your-package-list-here>
