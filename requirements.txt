@@ -1,0 +1,11 @@
+pandas>=2.2.3
+SPARQLWrapper>=2.0.0
+jupyter
+h5py
+h5pyd
+matplotlib
+notebook
+SPARQLWrapper
+rise
+tqdm
+sentence_transformers
