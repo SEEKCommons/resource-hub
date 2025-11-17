@@ -22,13 +22,13 @@ flowchart TB
     WDQS["Wikidata Query Service<br/>(SPARQL)"]
     WBAPI["Wikidata/Wikibase APIs<br/>(item CRUD, labels, Q-IDs)"]
     RHKG[(Resource Hub KG — RDF triple store)]
-    Reasoner[Reasoner & validators\nRDFS/OWL inference + SHACL checks]
+    Reasoner["Reasoner &amp; validators<br/>RDFS/OWL inference + SHACL checks"]
     VEC["(Optional vector index)<br/>(text &amp; schema embeddings)"]
   end
 
   %% --- Data Ingestion & Curation ---
   subgraph D["Data Ingestion &amp; Curation (Resource Hub)"]
-    SOURCES[Sources: ORCID, DOIs, Zenodo,\ninst. repos, CSV/JSON]
+    SOURCES["Sources: ORCID, DOIs, Zenodo,<br/>inst. repos, CSV/JSON"]
     MAP["RDF mapping<br/>(CSVW/R2RML, pipelines)"]
     RECON[Entity reconciliation\n→ Wikidata Q‑IDs / owl:sameAs]
     PROV[Provenance & quality metrics]
@@ -44,7 +44,7 @@ flowchart TB
   %% --- Ops & Governance ---
   subgraph F[Ops, Governance & Observability]
     LOGS[Telemetry & anonymized logs]
-    CI[CI checks: constraint violations,\nIRI/Q‑ID coverage]
+    CI["CI checks: constraint violations,<br/>IRI/Q‑ID coverage"]
     SEC[Privacy/licensing gates]
   end
 
