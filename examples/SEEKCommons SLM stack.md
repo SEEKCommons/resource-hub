@@ -38,9 +38,9 @@ flowchart TB
 
   %% --- Training / Evaluation Pipeline ---
   subgraph E[Model Training & Evaluation]
-    CORP[SEEKCommons corpora:\nproject docs, prompts↔SPARQL pairs,\ncurated KG traces]
+    CORP[SEEKCommons corpora:<br/>project docs, prompts↔SPARQL pairs,<br/>curated KG traces]
     TRAIN["Instruction/SFT + tool-use<br/>(opt. RLHF/active learning)"]
-    EVAL[Eval: factuality,\nKG-consistency, SPARQL success]
+    EVAL[Eval: factuality,<br/>KG-consistency, SPARQL success]
   end
 
   %% --- Ops & Governance ---
@@ -85,7 +85,6 @@ flowchart TB
   CORP --> TRAIN --> SLM
   EVAL --> TRAIN
   EVAL -. feedback .-> SLM
-
 ```
 
 ## Embedding the CARE Principles—**Collective Benefit, Authority to Control, Responsibility, and Ethics**—into the SEEKCommons SLM stack
