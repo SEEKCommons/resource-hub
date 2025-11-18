@@ -32,7 +32,7 @@ flowchart TB
   subgraph D["Data Ingestion &amp; Curation (Resource Hub)"]
     SOURCES["Sources: ORCID, DOIs, Zenodo,<br/>inst. repos, CSV/JSON"]
     MAP["RDF mapping<br/>(CSVW/R2RML, pipelines)"]
-    RECON[Entity reconciliation\n→ Wikidata Q‑IDs / owl:sameAs]
+    RECON[Entity reconciliation<br/>→ Wikidata Q‑IDs / owl:sameAs]
     PROV[Provenance & quality metrics]
   end
 
